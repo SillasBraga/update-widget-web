@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  AWS_S3_BUCKET: rocketseat-upload-widget-web-static
+  AWS_S3_BUCKET: rocketseat-upload-widget-web-static-sillas
   SOURCE_DIST: ./dist
 
 jobs:
@@ -40,7 +40,7 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ vars.AWS_REGION }}
-          
+
       - name: Sync files to S3
         id: sync-files-to-s3
         run: |
